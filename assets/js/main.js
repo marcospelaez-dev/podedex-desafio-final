@@ -48,7 +48,7 @@ loadMoreButton.addEventListener('click', () => {
 
 
 function individualPokemon(){
-    const listaItems = document.querySelectorAll('#pokemonList li span')
+    const listaItems = document.querySelectorAll(`#pokemonList li span`)
     
     listaItems.forEach((item, index) => {
         item.addEventListener('click', () => {

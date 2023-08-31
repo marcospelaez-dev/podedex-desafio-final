@@ -11,7 +11,7 @@ function loadPokemonItens(offset, limit) {
 
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
         const newHtml = pokemons.map((pokemon) => `
-                <li class="pokemon ${pokemon.type}" onclick="individualPokemon()">
+                <li class="pokemon ${pokemon.type}"  onclick="individualPokemon()">
                     <span class="number">#${pokemon.number}</span>
                     <span class="name">${pokemon.name}</span>
         
@@ -48,7 +48,7 @@ loadMoreButton.addEventListener('click', () => {
 
 
 function individualPokemon(){
-    const listaItems = document.querySelectorAll(`#pokemonList li span`)
+    const listaItems = document.querySelectorAll(`li.pokemon span.name`)
     
     listaItems.forEach((item, index) => {
         item.addEventListener('click', () => {

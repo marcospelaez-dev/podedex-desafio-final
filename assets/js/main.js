@@ -4,6 +4,7 @@ const loadMoreButton = document.getElementById('loadMoreButton')
 const maxRecords = 151
 const limit = 10
 let offset = 0
+var nomePoke = []
 
 
 
@@ -50,13 +51,15 @@ loadMoreButton.addEventListener('click', () => {
 function individualPokemon(){
     const listaItems = document.querySelectorAll(`li.pokemon`)
     
-    listaItems.forEach((item, index) => {
+    listaItems.forEach((item) => {
         item.addEventListener('click', () => {
-            var nomePoke = item.innerText
+            nomePoke = item.innerText
             console.log(nomePoke)
         })
     })
 }
+
+
 
 
 

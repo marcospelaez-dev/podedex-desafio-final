@@ -54,7 +54,8 @@ function individualPokemon(){
     
     listaItems.forEach((item) => {
         item.addEventListener('click', () => {
-            nomePoke = item.innerText            
+            nomePoke = item.innerText 
+            console.log(nomePoke)           
         })
     })
 }
